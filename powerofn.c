@@ -1,26 +1,22 @@
-#include <stdio.h>
-#include<conio.h>
+#include<stdio.h> 
+ 
 int main()
-{
-    int base, exponent,result = 1;
-    printf("Enter a base number: ");
+{       
+    int base, exponent, result = 1;
+    
+    printf("Enter base: ");
     scanf("%d", &base);
-    printf("Enter an exponent: ");
+    
+    printf("Enter exponent: ");
     scanf("%d", &exponent);
-    if(base >=0 && base <=0)
-    {
-        while (exponent != 0)
+    
+    int i = 1;
+    
+    while(i <= exponent)
     {
         result *= base;
-        --exponent;
+        i++;
     }
-    printf("Power of N = %d", result);
-        
-    }
-    else
-    {
-    printf("\n INVALID INPUT ");
-    }
-getch();
-
+    printf("%d to the power of %d is= %d", base,exponent, result);
+    getch();
 }
